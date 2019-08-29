@@ -11,7 +11,7 @@
 static NSString *const SocketHost = @"127.0.0.1";
 static uint16_t const SocketPort = 12345;
 
-@interface GCDSocketManager () <GCDAsyncSocketDelegate>
+@interface GCDSocketManager () <GCDAsyncSocketDelegate, NSCopying>
 /**
  断开重连定时器
  */
@@ -32,9 +32,27 @@ static uint16_t const SocketPort = 12345;
     static GCDSocketManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[[self class] alloc] init];
+        manager = [[super allocWithZone:NULL] init];
+        //为什么不用下面这句呢？
+        //为什么要覆盖allocWithZone方法，到底alloc 和 allocWithZone有什么区别呢？
+        //manager = [[super alloc] init] ;
     });
     return manager;
+}
+
+/*
+ 初始化一个对象的时候，[[Class alloc] init]，其实是做了两件事。
+ alloc 给对象分配内存空间，init是对对象的初始化，包括设置成员变量初值这些工作。
+ 而给对象分配空间，除了alloc方法之外，还有另一个方法： allocWithZone.
+ 使用alloc方法初始化一个类的实例的时候，默认是调用了allocWithZone的方法。为了保持单例类实例的唯一性，需要覆盖所有会生成新的实例的方法，如果初始化这个单例类的时候不走[[Class alloc] init] ，而是直接 allocWithZone， 那么这个单例就不再是单例了，所以必须把这个方法也堵上。
+ */
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [[super class] shareManager];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[super class] shareManager];
 }
 
 - (instancetype)init {

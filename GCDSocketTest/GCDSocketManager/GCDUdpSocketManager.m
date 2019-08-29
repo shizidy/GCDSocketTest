@@ -33,9 +33,17 @@ static uint16_t const SocketPort = 12345;
     static GCDUdpSocketManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[[self class] alloc] init];
+        manager = [[super allocWithZone:NULL] init];
     });
     return manager;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [[super class] shareManager];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[super class] shareManager];
 }
 
 - (instancetype)init {
