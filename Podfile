@@ -6,7 +6,7 @@ target 'GCDSocketTest' do
 
 
 pod 'CocoaAsyncSocket'
-
+pod 'MBProgressHUD'
 
 
 

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "034F60E215892B1A840348A21BF116E7"
+               BlueprintIdentifier = "81B45AB9FA2D14401C0F4509FEC8F9C4"
                BlueprintName = "Pods-GCDSocketTest"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-GCDSocketTest.a">

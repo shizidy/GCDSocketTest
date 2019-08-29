@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52FBD59898339756B756A50D9AF53978"
-               BlueprintName = "Pods-GCDSocketTest-GCDSocketTestUITests"
+               BlueprintIdentifier = "42A7253AB320D1E231714F26E361DFBB"
+               BlueprintName = "MBProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-GCDSocketTest-GCDSocketTestUITests.a">
+               BuildableName = "libMBProgressHUD.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

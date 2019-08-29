@@ -18,6 +18,9 @@
 		9A79A99323164B89008B3F95 /* GCDSocketTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79A99223164B89008B3F95 /* GCDSocketTestTests.m */; };
 		9A79A99E23164B89008B3F95 /* GCDSocketTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79A99D23164B89008B3F95 /* GCDSocketTestUITests.m */; };
 		9A79A9AD231658A6008B3F95 /* GCDSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79A9AC231658A6008B3F95 /* GCDSocketManager.m */; };
+		9AB02DED231756B500195064 /* GCDUdpSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB02DEC231756B500195064 /* GCDUdpSocketManager.m */; };
+		9AB02DF023175F3C00195064 /* TCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB02DEF23175F3C00195064 /* TCPViewController.m */; };
+		9AB02DF323175F4800195064 /* UDPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB02DF223175F4800195064 /* UDPViewController.m */; };
 		D3B1FA808E88CCA6AEE1DFF3 /* libPods-GCDSocketTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A44A48924B8EA8829776F533 /* libPods-GCDSocketTest.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,12 @@
 		9A79A99F23164B89008B3F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A79A9AB231658A6008B3F95 /* GCDSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSocketManager.h; sourceTree = "<group>"; };
 		9A79A9AC231658A6008B3F95 /* GCDSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSocketManager.m; sourceTree = "<group>"; };
+		9AB02DEB231756B500195064 /* GCDUdpSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDUdpSocketManager.h; sourceTree = "<group>"; };
+		9AB02DEC231756B500195064 /* GCDUdpSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDUdpSocketManager.m; sourceTree = "<group>"; };
+		9AB02DEE23175F3C00195064 /* TCPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPViewController.h; sourceTree = "<group>"; };
+		9AB02DEF23175F3C00195064 /* TCPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPViewController.m; sourceTree = "<group>"; };
+		9AB02DF123175F4800195064 /* UDPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPViewController.h; sourceTree = "<group>"; };
+		9AB02DF223175F4800195064 /* UDPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPViewController.m; sourceTree = "<group>"; };
 		A44A48924B8EA8829776F533 /* libPods-GCDSocketTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCDSocketTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6574861A8C9C1FB56E6E5E /* Pods-GCDSocketTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDSocketTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCDSocketTest/Pods-GCDSocketTest.release.xcconfig"; sourceTree = "<group>"; };
 		C1FFC8F020B450F1761A4405 /* libPods-GCDSocketTest-GCDSocketTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCDSocketTest-GCDSocketTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +143,10 @@
 				9A79A9AE231658B6008B3F95 /* GCDSocketManager */,
 				9A79A97923164B87008B3F95 /* AppDelegate.h */,
 				9A79A97A23164B87008B3F95 /* AppDelegate.m */,
+				9AB02DEE23175F3C00195064 /* TCPViewController.h */,
+				9AB02DEF23175F3C00195064 /* TCPViewController.m */,
+				9AB02DF123175F4800195064 /* UDPViewController.h */,
+				9AB02DF223175F4800195064 /* UDPViewController.m */,
 				9A79A97C23164B87008B3F95 /* ViewController.h */,
 				9A79A97D23164B87008B3F95 /* ViewController.m */,
 				9A79A97F23164B87008B3F95 /* Main.storyboard */,
@@ -168,6 +181,8 @@
 			children = (
 				9A79A9AB231658A6008B3F95 /* GCDSocketManager.h */,
 				9A79A9AC231658A6008B3F95 /* GCDSocketManager.m */,
+				9AB02DEB231756B500195064 /* GCDUdpSocketManager.h */,
+				9AB02DEC231756B500195064 /* GCDUdpSocketManager.m */,
 			);
 			path = GCDSocketManager;
 			sourceTree = "<group>";
@@ -388,8 +403,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A79A97E23164B87008B3F95 /* ViewController.m in Sources */,
+				9AB02DF323175F4800195064 /* UDPViewController.m in Sources */,
 				9A79A98923164B89008B3F95 /* main.m in Sources */,
+				9AB02DF023175F3C00195064 /* TCPViewController.m in Sources */,
 				9A79A97B23164B87008B3F95 /* AppDelegate.m in Sources */,
+				9AB02DED231756B500195064 /* GCDUdpSocketManager.m in Sources */,
 				9A79A9AD231658A6008B3F95 /* GCDSocketManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
